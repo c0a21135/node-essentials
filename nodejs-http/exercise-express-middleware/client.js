@@ -6,7 +6,7 @@ http.get(
     hostname: "localhost",
     path: "/users",
     headers: {
-      authorization: 'secretpassword' // 接続するときのパスワードの設定？
+      authorization: 'hogehogepiyopiyo' // 接続するときのパスワードの設定？
     },
   },
   (res) => {
