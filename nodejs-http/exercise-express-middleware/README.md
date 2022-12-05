@@ -6,6 +6,9 @@
 * パスワードは、'hogehogepiyopiyo'の場合認証が通るようにした。
 * 結果がTrueの場合はそのまま次へ進む。
 * 結果がFalseの場合はstatus(401)を出し、'Not permitted'を表示する。(chunkデータの応答をしない)
+### 入力フォームの作成
+* URL「/information」にて入力フォームから情報を送信できる。
+* 送信した内容はURL「/」にて表示する
 
 ## clinet.js
 ### chunk認証機能
