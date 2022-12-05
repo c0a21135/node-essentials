@@ -43,7 +43,7 @@ app.get("/information", (req, res, next) => {
 
 // postを使ってホームにフォームの内容が表示できるように
 app.post("/", (req, res, next) => {
-  res.send(req.body);
+  res.json(req.body);
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
