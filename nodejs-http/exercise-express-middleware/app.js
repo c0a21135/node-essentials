@@ -31,4 +31,19 @@ app.get("/products", (req, res) => {
   ]);
 });
 
+// フォーム内容を送信する為に"urlencoded"を使用する
+app.use(express.urlencoded({ extended: true}));
+
+// URL「/menu」にて送信フォームを作成
+app.get("/menu", (req, res, next) => {
+  res.send(
+    '<form action="/" method="POST"><input type="text" name="menu"><button type="submit">送信</button></form>'
+  );
+});
+
+// postを使ってホームにフォームの内容が表示できるように
+app.post("/", (req, res, next) => {
+  res.send(req.body);
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
