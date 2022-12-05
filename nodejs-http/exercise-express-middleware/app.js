@@ -34,10 +34,10 @@ app.get("/products", (req, res) => {
 // フォーム内容を送信する為に"urlencoded"を使用する
 app.use(express.urlencoded({ extended: true}));
 
-// URL「/menu」にて送信フォームを作成
-app.get("/menu", (req, res, next) => {
+// URL「/information」にて送信フォームを作成
+app.get("/information", (req, res, next) => {
   res.send(
-    '<form action="/" method="POST"><input type="text" name="menu"><button type="submit">送信</button></form>'
+    '<form action="/" method="POST"><input type="text" name="information"><button type="submit">送信</button></form>'
   );
 });
 
